@@ -1,4 +1,4 @@
-# Workana Challenge
+# Periodic Table Highlighter
 
 **_Created by Gabriel Leal Sala de Oliveira_**
 
