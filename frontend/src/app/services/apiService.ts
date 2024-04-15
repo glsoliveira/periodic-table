@@ -14,7 +14,8 @@ export interface ElementsResponse {
   elements: Element[];
 }
 
-const API_BASE_URL = 'http://localhost:3500/';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 // Creating an object to simulate an API service with basic HTTP methods
 const apiService = {
