@@ -1,0 +1,43 @@
+{
+  "include": ["src", "src/@types","**/*.test.ts","**/*.test.tsx", "cypress/**/*.ts",  "src/setupTests.ts"],
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types"],
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "paths": {
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+    
+    },
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

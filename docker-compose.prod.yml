@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      target: production
+    image: lingobridge/backend-prod
+    ports:
+      - "80:80"
+
+  frontend:
+    build:
+      context: ./frontend
+      target: production
+    image: lingobridge/frontend-prod
+    ports:
+      - "80:80"
