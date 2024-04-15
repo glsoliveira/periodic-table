@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { getElementDefinitions as getServiceDefinitions } from '../services/elementsService';
+import { getElementDefinitions as getServiceDefinitions } from '../services/elementsDefinitionService';
 
 export async function getElementDefinitions(req: Request, res: Response): Promise<void> {
     try {

@@ -1,8 +1,7 @@
 {
-  "name": "hero99-challenge",
+  "name": "hero99-challenge-frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gabriel-sala-br.github.io/react-challenge",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +10,8 @@
     "preview": "vite preview",
     "start": "serve -s build -l 5000",
     "test": "jest --detectOpenHandles",
-    "test:cypress": "cypress open"
+    "test:cypress-open": "cypress open",
+    "test:cypress-run": "cypress run"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
@@ -30,6 +30,7 @@
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.2",
     "@testing-library/user-event": "^14.5.2",
+    "@types/aria-query": "^5.0.4",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.77",
@@ -38,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "aria-query": "^5.3.0",
     "cypress": "^13.7.3",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
