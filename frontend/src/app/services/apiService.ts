@@ -14,7 +14,7 @@ export interface ElementsResponse {
   elements: Element[];
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = "https://periodic-table-backend.onrender.com/";
 
 
 // Creating an object to simulate an API service with basic HTTP methods
