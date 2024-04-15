@@ -4,6 +4,11 @@ FROM node:18-alpine as base
 # Set the working directory
 WORKDIR /app
 
+# Argument for node environment
+ARG NODE_ENV
+# Set environment variable
+ENV NODE_ENV=${NODE_ENV}
+
 # Copy dependency files
 COPY package*.json ./
 
