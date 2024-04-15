@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build && node build/index.js",
     "test": "jest",
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./build && tsc && copyfiles -u 1 src/docs/*.json build/docs/",
     "dev": "ts-node-dev --poll src/index.ts"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
     "@types/swagger-ui-express": "^4.1.6",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",

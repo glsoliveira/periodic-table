@@ -1,8 +1,9 @@
 require('dotenv').config();
+const swaggerSpec = require('./docs/swagger.json'); 
 import express from 'express';
 import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
-import swaggerSpec from '../docs/swagger.json';  // Ajuste o caminho conforme necessário
+
 
 import routes from './routes';
 
