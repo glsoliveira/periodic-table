@@ -1,0 +1,117 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Hero99 - Challenge - APIs",
+        "description": "API para interagir com elementos da tabela periódica",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3500",
+            "description": "Local server"
+        }
+    ],
+    "paths": {
+        "/api/elements": {
+            "get": {
+                "summary": "Retrieve all elements",
+                "responses": {
+                    "200": {
+                        "description": "A list of elements",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "elements": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": [
+                                                "He",
+                                                "Li",
+                                                "Be",
+                                                "Ne",
+                                                "Na",
+                                                "Mg"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/elements": {
+            "get": {
+                "summary": "Retrieve definitions of specific elements",
+                "description": "This endpoint retrieves the definitions of elements specified by their symbols.",
+                "parameters": [
+                    {
+                        "name": "symbols",
+                        "in": "query",
+                        "description": "Comma-separated list of element symbols",
+                        "required": true,
+                        "type": "string",
+                        "example": "G,O"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with element definitions",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "results": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "symbol": {
+                                                "type": "string"
+                                            },
+                                            "definition": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "examples": {
+                            "application/json": {
+                                "success": true,
+                                "results": [
+                                    {
+                                        "symbol": "G",
+                                        "definition": [
+                                            "O elemento G é o elemento de número atômico 118 na tabela periódica, também conhecido como oganesson (Og). Devido à sua alta radioatividade, suas propriedades químicas ainda não foram totalmente estudadas. Não possui usos comerciais conhecidos."
+                                        ]
+                                    },
+                                    {
+                                        "symbol": "O",
+                                        "definition": [
+                                            "O oxigênio possui alta reatividade química, sendo essencial para a combustão, oxidação e respiração aeróbica. É utilizado na produção de aço, medicamentos, tratamento de água e na composição do ar atmosférico. Pode formar ligações covalentes e iônicas."
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request parameters"
+                    }
+                }
+            }
+        }
+    }
+}
