@@ -5,7 +5,7 @@ services:
     build:
       context: ./backend
       target: production
-    image: lingobridge/backend-prod
+    image: hero99challenge/backend-production
     ports:
       - "80:80"
 
@@ -13,6 +13,6 @@ services:
     build:
       context: ./frontend
       target: production
-    image: lingobridge/frontend-prod
+    image: hero99challenge/frontend-production
     ports:
       - "80:80"
