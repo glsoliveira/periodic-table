@@ -86,7 +86,7 @@ docker-compose run --service-ports backend npm run test
 
 O aplicativo possui testes end-to-end no frontend com Cypress. Para rodar esses testes:
 
-#### Na web:
+#### No navegador:
 
 ```bash
 cd frontend
@@ -154,7 +154,7 @@ A documentação das APIs está disponível no Swagger. Com o Docker em execuç�
 
 - **Solução:** Implementei Cypress para os testes end-to-end. Isso me permitiu simular interações do usuário com a interface e verificar a integridade das funcionalidades de ponta a ponta. Cypress oferece uma boa documentação e uma comunidade ativa, o que facilitou a sua implementação e utilização.
 
-**Desafio 2: Otimização do Processo de Desenvolvimento**
+**Desafio 3: Otimização do Processo de Desenvolvimento**
 
 - **Solução:** Adotei o Vite como minha ferramenta de construção, que aproveita o ES Modules para servir o código. O Vite proporciona uma atualização instantânea do módulo e reinício rápido do servidor, o que otimizou significativamente o meu fluxo de desenvolvimento.
 
